@@ -1,3 +1,12 @@
+/*
+
+Doubly linkedlist
+    =>createnode function adds new node to last
+    =>inserathead function adds bew node from the front
+    =>display function display the contents of the linkedlist
+
+*/
+
 #include<iostream>
 using namespace std;
 
@@ -16,12 +25,10 @@ class node{
 
 void insertathead( node* &head , int value ){
     node* n = new node( value );
-    if( head == NULL ){
-        head = n;
-        return;
-    }
     n->next = head;
-    head->prev = n;
+    if( head != NULL ){
+        head->prev = n;
+    }
     head = n;
     return;
 }
