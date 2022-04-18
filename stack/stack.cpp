@@ -19,13 +19,13 @@ class stack{
 
 	public:
 		stack(){
-			arr = new int [n];
+			arr = new int[n];
 			top = -1;
 		}
 
 		void push( int val ){
 			if( top == n-1 ){
-				cout << "Stack overflow." << endl;
+				cout << "Overflow" << endl;
 				return;
 			}
 			arr[++top] = val;
@@ -34,7 +34,7 @@ class stack{
 
 		void pop(){
 			if( top == -1 ){
-				cout << "Stack underflow." << endl;
+				cout << "Underflow" << endl;
 				return;
 			}
 			top--;
@@ -43,14 +43,14 @@ class stack{
 
 		int top_element(){
 			if( top == -1 ){
-				cout << "Stack underflow." << endl;
+				cout << "Underflow" << endl;
 				return -1;
 			}
-			return arr[top];
+			return (arr[top]);
 		}
 
 		bool empty(){
-			return (top==-1);
+			return (top == -1);
 		}
 };
 
